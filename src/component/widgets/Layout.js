@@ -11,7 +11,7 @@ export default function Layout({ children }) {
       <main className="w-full">
         { children }
 
-        <div className="w-full px-3 py-10 md:px-0 md:py-20 relative bg-contact-bg bg-cover flex after:bg-black after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-opacity-50">
+        <div className="w-full px-3 py-10 md:px-0 md:py-20 relative bg-contact-bg bg-cover bg-fixed flex after:bg-black after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-opacity-50">
           <ContactForm />
         </div>
       </main>

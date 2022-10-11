@@ -13,7 +13,7 @@ export default function ContactForm() {
 
   return (
     <FormProvider {...methods}>
-      <form className="grid md:grid-cols-2 z-20 gap-8 w-full max-w-3xl m-auto pb-8 md:pb-20 px-5 md:px-10 bg-white bg-opacity-80 rounded" onSubmit={handleSubmit(submit)}>
+      <form className="grid md:grid-cols-2 z-20 gap-8 w-full max-w-3xl m-auto pb-8 md:pb-20 px-5 md:px-10 bg-white bg-opacity-90 rounded" onSubmit={handleSubmit(submit)}>
         <label className="text-2xl md:text-3xl font-bold md:col-span-2 pt-5 md:pt-10 md:pb-3 text-center block">Get active with us on Neurodiversity</label>
         <Input 
           name="name"

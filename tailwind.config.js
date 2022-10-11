@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'contact-bg': "url('/public/img/contact_bg.jpg')"
+        "about-wallpaper": "url(/public/img/about.png)",
+        "skill-wallpaper": "url(/public/img/illustration.svg)"
       }
     },
   },

@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+  @apply text-slate-500;
+}
+
+.logo-text {
+  font-family: 'Bungee Spice', cursive;
+  @apply font-bold;
+}
+
+.btn {
+  @apply shadow-none min-w-0;
+}
+
+.centered {
+  @apply max-w-6xl w-full mx-auto;
+}
+
+.typewriter {
+  @apply w-full border-r border-slate-500 my-[30px] overflow-hidden;
+  white-space: nowrap;
+  animation: type 3s steps(23) 2s both, blink 0.7s infinite, delete 3s steps(23) 2s both, blink 0.7s infinite;
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+  to {
+    width: 290px;
+  }
+}
+
+@keyframes delete {
+  from {
+    width: 290px;
+  }
+  to {
+    width: 0;
+  }
+}
+@keyframes blink {
+  from {
+  }
+  to {
+    border-right-color: transparent;
+  }
+}

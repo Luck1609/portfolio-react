@@ -1,4 +1,6 @@
 import React from 'react'
+import LinkItem from 'component/Link'
+import img from 'assets/img'
 
 export default function Navbar() {
   return (
@@ -14,32 +16,62 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
-      <ul className="fixed h-screen -ml-[260px]  top-0 left-0 w-[250px] z-50 md:h-auto md:relative md:w-full max-w-6xl default-gradient md:mx-auto rounded">
-        <li className="block md:inline-flex p-3 md:p-5">
-          AAN
-        </li>
-        <li className="block md:inline-flex p-3 md:p-5">
-          What We Do
-        </li>
-        <li className="block md:inline-flex p-3 md:p-5">
-          What is Neuro Diversity
-        </li>
-        <li className="block md:inline-flex p-3 md:p-5">
-          Get Involved
-        </li>
-        <li className="block md:inline-flex p-3 md:p-5">
-          Awesome Stores
-        </li>
-        <li className="block md:inline-flex p-3 md:p-5">
-          Events
-        </li>
-        <li className="block md:inline-flex p-3 md:p-5">
-          Donate
-        </li>
-        <li className="block md:inline-flex p-3 md:p-5">
-          Projects
-        </li>
-      </ul>
+      <div className="flex px-8 py-3 items-center default-gradient fixed h-screen -ml-[260px]  top-0 left-0 w-[250px] z-50 md:h-auto md:relative md:w-full md:mx-auto">
+        <LinkItem url='/' className="grow">
+          <img src={img.logo} alt="" className="h-16" />
+        </LinkItem>
+
+        <ul className="">
+          {
+            links.map(({name, url}) => {
+              return (
+                <li className="block md:inline-flex" key={name}>
+                  <LinkItem url={url} className="p-3 md:p-5 md:px-3">
+                    <span className="">{name}</span>
+                  </LinkItem>
+                </li>
+              )
+            })
+          }
+        </ul>
+      </div>
     </nav>
   )
 }
+
+
+
+const links = [
+  {
+    name: 'AAN',
+    url: '/'
+  },
+  {
+    name: 'Contact Us',
+    url: '/contact-us'
+  },
+  {
+    name: 'What is Neuro Diversity',
+    url: '/about-neuro-diversity'
+  },
+  {
+    name: 'Get Involved',
+    url: '/get-involved'
+  },
+  {
+    name: 'Awesome Stores',
+    url: '/stories'
+  },
+  {
+    name: 'Events',
+    url: '/events'
+  },
+  {
+    name: 'Donate',
+    url: '/donate'
+  },
+  {
+    name: 'Projects',
+    url: '/projects'
+  },
+]
