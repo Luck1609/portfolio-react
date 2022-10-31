@@ -24,13 +24,13 @@ body {
 }
 
 .centered {
-  @apply max-w-6xl w-full mx-auto;
+  @apply max-w-6xl w-full mx-auto md:w-5/6;
 }
 
 .typewriter {
   @apply w-full border-r border-slate-500 my-[30px] overflow-hidden;
   white-space: nowrap;
-  animation: type 3s steps(23) 2s both, blink 0.7s infinite, delete 3s steps(23) 2s both, blink 0.7s infinite;
+  animation: type 3s steps(23) 2s both, blink 0.7s infinite;
 }
 
 @keyframes type {
@@ -38,22 +38,41 @@ body {
     width: 0;
   }
   to {
-    width: 290px;
+    width: 270px;
   }
 }
 
-@keyframes delete {
+/* @keyframes delete {
   from {
     width: 290px;
   }
   to {
     width: 0;
   }
-}
+} */
 @keyframes blink {
   from {
   }
   to {
     border-right-color: transparent;
+  }
+}
+
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
   }
 }

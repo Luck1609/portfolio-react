@@ -14,6 +14,9 @@ import js from "./js.png";
 import tutor from "../french_tutor.png";
 import paradise from "../paradise.png";
 import next from "./nextjs.png";
+import resume from "../nathaniel_obeng_resume.pdf";
+import ra from "../ra.png";
+import grsc from "../grsc.jpg";
 
 const skills = {
   html,
@@ -32,6 +35,9 @@ const skills = {
   tutor,
   next,
   paradise,
+  resume,
+  ra,
+  grsc,
 };
 
 export default skills;

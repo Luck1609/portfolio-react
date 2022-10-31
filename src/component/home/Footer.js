@@ -4,7 +4,7 @@ import * as Icon from "@iconscout/react-unicons";
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-tr from-slate-900 to-slate-700">
-      <div className="w-full max-w-6xl m-auto flex p-3 text-slate-300">
+      <div className="w-full max-w-6xl m-auto flex flex-col lg:flex-row p-3 text-slate-300">
         <label className="text-lg grow">
           &copy; {new Date().getFullYear()} - Built from scratch
         </label>
@@ -20,7 +20,7 @@ export default function Footer() {
               <Icon.UilLinkedinAlt size={25} />
             </a>
           </li>
-          <li className="inline-flex ml-3">
+          <li className="inline-flex mx-3">
             <a
               href="https://github.com/Luck1609"
               target="_blank"
@@ -32,7 +32,7 @@ export default function Footer() {
           </li>
           <li className="inline-flex">
             <a
-              href="https://api.whatsapp.com/send?phone=+233249149420"
+              href="https://wa.me/0503894555"
               target="_blank"
               rel="noreferrer"
               className="flex items-center justify-center h-10 w-10 m-auto rounded-lg"

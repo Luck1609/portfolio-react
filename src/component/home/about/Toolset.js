@@ -4,21 +4,25 @@ import skills from "assets/graphics/skills";
 
 export default function Toolset() {
   return (
-    <div className="flex flex-col">
-      <div className="bg-skill-wallpaper bg-contain w-[220px] m-auto lg:basis-1/2 h-56"></div>
+    <div className="flex flex-col lg:flex-row">
+      <div className="bg-skill-wallpaper bg-contain md:bg-cover w-[220px] m-auto md:w-3/5 lg:basis-1/3 h-56 md:h-[360px] md:mb-8"></div>
       
-      <div className="lg:basis-1/2 text-xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 lg:gap-7">
+      <div className="lg:basis-2/3 grid grid-cols-2 sm:grid-cols-3 gap-3 lg:gap-7 lg:pl-5">
+        <div className="col-span-2 md:col-span-3">
+          <label className="text-2xl md:text-3xl font-semibold block text-center p-3">My Skill Set</label>
+          <p className="text-lg md:text-2xl mb-5 md:leading-10">Below is a list of languages, frameworks, and tools that I have knowledge of, which I normally use on my projects.</p>
+        </div>
         {skills_info.map(({ name, logo }) => {
           return (
             <div
               className="flex items-center bg-slate-200 rounded-full border border-slate-300 pl-1"
               key={name}
             >
-              <div className="w-8 md:w-12 h-8 md:h-12 relative rounded-full overflow-hidden bg-white">
+              <div className="w-8 md:w-10 lg:w-12 h-8 md:h-10  lg:h-12 relative rounded-full overflow-hidden bg-white">
                 <img src={logo} alt={`${name} logo`} layout="fill" />
               </div>
 
-              <span className="ml-3 text-sm md:text-lg">{name}</span>
+              <span className="ml-3 text-sm md:text-[16px] lg:text-lg">{name}</span>
             </div>
           );
         })}
@@ -27,16 +31,6 @@ export default function Toolset() {
   );
 }
 
-// <Chip
-//   avatar={
-//     <div className="w-14 h-14 relative rounded-full overflow-hidden">
-//       <Image src={logo} alt={`${name} logo`} layout="fill" />
-//     </div>
-//   }
-//   label={name}
-//   key={name}
-//   className="flex justify-start"
-// />
 
 const skills_info = [
   {

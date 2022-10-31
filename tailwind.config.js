@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         "about-wallpaper": "url(/public/img/about.png)",
-        "skill-wallpaper": "url(/public/img/illustration.svg)"
+        "skill-wallpaper": "url(/public/img/illustration.svg)",
+        "exp": "url(/public/img/exp.jpg)",
       }
     },
   },

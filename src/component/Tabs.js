@@ -4,6 +4,7 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import About from 'component/home/about/About';
 import Toolset from 'component/home/about/Toolset';
+import Awards from './home/about/Awards';
 
 
 function TabPanel(props) {
@@ -46,6 +47,7 @@ export default function BasicTabs() {
         <Tabs value={value} onChange={handleChange} className="flex flex-col" aria-label="basic tabs example">
           <Tab className="lg:w-full" label="About Me" {...a11yProps(0)} />
           <Tab className="lg:w-full" label="My Skillset" {...a11yProps(1)} />
+          <Tab className="lg:w-full" label="My Resume" {...a11yProps(2)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
@@ -54,11 +56,11 @@ export default function BasicTabs() {
       <TabPanel value={value} index={1}>
         <Toolset />
       </TabPanel>
-      {/* 
-        <TabPanel value={value} index={2}>
-          <Awards />
-        </TabPanel> 
-      */}
+      
+      <TabPanel value={value} index={2}>
+        <Awards />
+      </TabPanel> 
+     
     </Box>
   );
 }
